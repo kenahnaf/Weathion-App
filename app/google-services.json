@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "790485897885",
+    "firebase_url": "https://weathion-fd049-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "weathion-fd049",
+    "storage_bucket": "weathion-fd049.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790485897885:android:4b473f0869f804493e3a74",
+        "android_client_info": {
+          "package_name": "com.example.weathion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTPFW4wW81U18WIpzYF8RVwzDY35yIKTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

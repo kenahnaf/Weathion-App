@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bright_snow"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@drawable/bg_header"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="32dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hai, hari ini cerah"
+            android:textColor="@color/black_text"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvQuote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Jangan lupa pakai sunscreen ya!"
+            android:textColor="@color/black_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCuaca"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:cardBackgroundColor="@color/lavender_grey"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieWeather"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+
+                <TextView
+                    android:id="@+id/tvStatusCuaca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Cerah"
+                    android:textColor="@color/bright_snow"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Space android:layout_width="match_parent" android:layout_height="24dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSuhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/sweet_salmon"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="24dp" android:paddingVertical="14dp" android:orientation="horizontal" android:weightSum="2">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Suhu" android:textColor="@color/black_text" android:textSize="18sp"/>
+                <TextView android:id="@+id/tvSuhu" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="--°C" android:textColor="@color/black_text" android:textSize="18sp" android:textStyle="bold" android:gravity="end"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardKelembapan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/sweet_salmon"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="24dp" android:paddingVertical="14dp" android:orientation="horizontal" android:weightSum="2">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Kelembapan" android:textColor="@color/black_text" android:textSize="18sp"/>
+                <TextView android:id="@+id/tvKelembapan" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="--%" android:textColor="@color/black_text" android:textSize="18sp" android:textStyle="bold" android:gravity="end"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLdr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/sweet_salmon"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="6dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="24dp" android:paddingVertical="14dp" android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="LDR Raw" android:textColor="@color/black_text" android:textSize="18sp"/>
+                    <TextView android:id="@+id/tvLdr" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="----" android:textColor="@color/black_text" android:textSize="18sp" android:textStyle="bold" android:gravity="end"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="(0: Terang, 4095: Gelap)" android:textColor="#801A1A1A" android:textSize="11sp" android:gravity="center" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

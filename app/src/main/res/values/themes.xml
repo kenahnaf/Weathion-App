@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Weathion" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/light_gold</item>
+        <item name="colorSecondary">@color/sweet_salmon</item>
+        <item name="android:windowBackground">@color/bright_snow</item>
+        <item name="android:statusBarColor">@color/bright_snow</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.Weathion" parent="Base.Theme.Weathion" />
+</resources>

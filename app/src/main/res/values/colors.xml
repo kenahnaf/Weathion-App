@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="shadow_grey">#272838</color>
+    <color name="lavender_grey">#7E7F9A</color>
+    <color name="light_gold">#F3DE8A</color>
+    <color name="sweet_salmon">#EB9486</color>
+    <color name="bright_snow">#F9F8F8</color>
+    <color name="black_text">#1A1A1A</color>
+</resources>
