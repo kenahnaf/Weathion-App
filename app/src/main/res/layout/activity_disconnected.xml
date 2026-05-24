@@ -10,12 +10,12 @@
     <LinearLayout
         android:id="@+id/headerLayoutOff"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="125dp"
         android:background="@drawable/bg_header"
         android:elevation="8dp"
         android:orientation="vertical"
         android:paddingStart="24dp"
-        android:paddingTop="15dp"
+        android:paddingTop="38dp"
         android:paddingEnd="24dp"
         android:paddingBottom="16dp">
 

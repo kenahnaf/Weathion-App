@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val child = root.getChildAt(i)
 
             // Kalo dia langsung ketemu Teks (Kaya di card Suhu & Kelembapan)
-            if (child is TextView) { 
+            if (child is TextView) {
                 child.setTextColor(ContextCompat.getColor(this, colorRes))
             }
             // Kalo dia nemu kotak lagi di dalem kotak (Kaya di card LDR Raw)
@@ -491,10 +491,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             calendar.set(Calendar.MILLISECOND, 0)
             if (daysToAdd > 0) calendar.add(Calendar.DAY_OF_YEAR, daysToAdd)
 
+            // Pake alarm santai (setAndAllowWhileIdle) biar HP Android 14+ kaga ngamuk
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                alarmManager.setExactAndAllowWhileIdle(android.app.AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
+                alarmManager.setAndAllowWhileIdle(android.app.AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
             } else {
-                alarmManager.setExact(android.app.AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
+                alarmManager.set(android.app.AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
             }
         }
 
